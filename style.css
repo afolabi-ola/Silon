@@ -1,0 +1,722 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: arial;
+  background-color: aliceblue;
+  color: black;
+}
+
+.nav1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(253, 232, 232);
+  list-style-type: none;
+  font-size: 10px;
+  padding: 0px 50px 0px 50px;
+}
+
+.nav1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav1 a:hover {
+  background-color: lightpink;
+  transition: 0.5s ease-out;
+  padding: 10px;
+}
+
+.navcontact {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navcontact li {
+  padding: 12px;
+}
+
+.lang {
+  display: flex;
+}
+.lang li {
+  padding: 12px;
+}
+
+.bars-times {
+  display: flex;
+  position: relative;
+  display: none;
+}
+
+.bars-times li {
+  padding: 8px 12px;
+}
+
+#bars {
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 900;
+  right: 0;
+}
+#times {
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 900;
+  top: 10px;
+  right: 0;
+}
+
+@media screen and (max-width: 670px) {
+  .nav1 {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .nav1 {
+    padding: 0px 10px 0px 0px;
+  }
+  .bars-times {
+    display: block;
+  }
+  #bars {
+    display: flex;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  #bars.active {
+    display: none;
+    transition: 0.5s ease-in;
+  }
+
+  #times.active {
+    display: block;
+    transition: 0.5s ease-out;
+  }
+  .lang.active {
+    display: block;
+    position: absolute;
+    right: 2%;
+    z-index: 4;
+    background-color: rgb(253, 232, 232);
+    top: 5%;
+  }
+  .lang.active li {
+    padding: 5px;
+  }
+}
+
+.nav2 {
+  font-size: 10px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+.nav2 a {
+  text-decoration: none;
+  color: black;
+}
+
+.silon li {
+  padding: 8px 12px;
+}
+
+.select1 {
+  display: flex;
+  padding: 10px 0px;
+}
+
+.select1 li {
+  padding: 8px 12px;
+}
+.select1 li:hover {
+  background-color: lightpink;
+  transition: 0.5s ease-out;
+}
+
+.iconcart {
+  padding: 10px 10px 10px 0px;
+  position: relative;
+}
+.iconcart i {
+  padding: 8px;
+}
+
+#cart::after {
+  content: "0";
+  width: 8px;
+  height: 8px;
+  background: red;
+  position: absolute;
+  text-align: center;
+  color: aliceblue;
+  border-radius: 50%;
+  top: 12%;
+  padding: 2px;
+  font-size: 8px;
+}
+
+#heart::after {
+  content: "09";
+  width: 10px;
+  height: 10px;
+  background: red;
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  color: aliceblue;
+  top: 10%;
+  padding: 2px;
+  font-size: 8px;
+}
+
+#caret {
+  padding: 0px;
+}
+
+.bars-times2 {
+  display: flex;
+  position: relative;
+  display: none;
+}
+
+.bars-times2 li {
+  padding: 12px 12px;
+}
+
+#bars2 {
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 900;
+  right: 0;
+}
+#times2 {
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 900;
+  top: 10px;
+  right: 0;
+}
+
+@media screen and (max-width: 604px) {
+  .nav2 {
+    justify-content: space-between;
+  }
+
+  .select1 {
+    display: none;
+  }
+
+  .bars-times2 {
+    display: flex;
+  }
+
+  #bars2 {
+    display: block;
+    cursor: pointer;
+  }
+
+  #bars2.active {
+    display: none;
+  }
+
+  #times2.active {
+    display: block;
+    cursor: pointer;
+  }
+
+  .select1.active {
+    display: block;
+    position: absolute;
+    background-color: aliceblue;
+    top: 10%;
+    left: 5%;
+    z-index: 434;
+  }
+}
+
+.ultimate {
+  background-color: lightpink;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0px 0px 0px 90px;
+  z-index: 2;
+}
+
+.collection p {
+  font-size: x-small;
+  font-family: euphemia;
+  padding: 80px 0px 5px 0px;
+}
+
+.fashionhere h1 {
+  font-family: euphemia;
+  padding: 0px 0px 20px 0px;
+}
+
+.completewomen {
+  padding: 30px 0px 0px 50px;
+}
+
+.ultimateimg img {
+  width: 500px;
+  padding: 0px 0px 0px 0px;
+  margin-bottom: -4px;
+}
+
+@media screen and (max-width: 668px) {
+  .ultimateimg img {
+    position: relative;
+    z-index: 2;
+  }
+
+  .completewomen {
+    position: absolute;
+    z-index: 4;
+    left: 15%;
+    top: 10%;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .ultimateimg img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 394px) {
+  .ultimateimg img {
+    width: 300px;
+  }
+
+  .completewomen {
+    left: 0%;
+    top: 10%;
+  }
+
+  .fashionhere {
+    font-size: 10px;
+  }
+}
+
+.featured {
+  text-align: center;
+  padding: 30px 0px 40px 0px;
+}
+
+.featuredimg img {
+  width: 200px;
+}
+
+.featuredimg {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 150px 50px 150px;
+  font-size: xx-small;
+  text-align: center;
+}
+
+.featuredimg .star {
+  display: flex;
+  padding: 0px 50px 0px 50px;
+  color: red;
+}
+
+.featuredimg .star i {
+  padding: 8px;
+}
+
+@media screen and (max-width: 686px) {
+  .featuredimg {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .featuredimg .star {
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 204px) {
+  .featuredimg img {
+    width: 100px;
+  }
+}
+
+.fifty {
+  background-color: rgb(230, 222, 213);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 0px 0px 250px;
+}
+
+.parent {
+  text-align: center;
+  padding: 0px 50px 0px 0px;
+}
+
+.childimg img {
+  width: 400px;
+  margin-bottom: -4px;
+}
+
+.child1 {
+  font-family: Freestyle Script;
+  font-size: 50px;
+  padding: 80px 0px 10px 0px;
+}
+
+.child2 {
+  padding: 0px 0px 30px 0px;
+}
+
+@media screen and (max-width: 838px) {
+  .fifty {
+    padding: 0px 0px 0px 50px;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .fifty {
+    padding: 0;
+    position: relative;
+  }
+
+  .parent {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .childimg img {
+    width: 350px;
+  }
+}
+
+.most {
+  text-align: center;
+  padding: 30px 0px 50px 0px;
+}
+
+.mostimg img {
+  width: 150px;
+}
+
+.mostimg {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: xx-small;
+  text-align: center;
+}
+
+.mostimg .star {
+  display: flex;
+  color: red;
+}
+
+.star {
+  padding: 0px 20px 0px 20px;
+}
+
+.mostimg i {
+  padding: 8px;
+}
+
+@media screen and (max-width: 678px) {
+  .mostimg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+  }
+  .mostimg .star {
+    display: flex;
+    justify-content: center;
+    color: red;
+  }
+}
+@media screen and (max-width: 332px) {
+  .mostimg {
+    display: grid;
+    padding: 0px 0px 50px 0px;
+    grid-template-columns: 1fr;
+  }
+
+  .mostimg .star {
+    display: flex;
+    justify-content: center;
+    color: red;
+  }
+}
+
+.littleicon img {
+  width: 50px;
+}
+
+.littleicon {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0px 0px 50px 0px;
+}
+
+.littleiconchild {
+  border: 1px solid rgb(224, 224, 224);
+  padding: 20px 20px 20px 20px;
+  margin: 0px 10px 0px 10px;
+}
+@media screen and (max-width: 690px) {
+  .littleicon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 246px) {
+  .littleicon {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trending {
+  text-align: center;
+  padding: 0px 0px 50px 0px;
+}
+
+.trendingimg img {
+  width: 150px;
+}
+
+.trendingimg {
+  display: flex;
+  justify-content: center;
+  font-size: xx-small;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.trendingimg .star {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.trendingimg2 {
+  display: flex;
+  justify-content: center;
+  font-size: xx-small;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.trending-img-cont {
+  padding: 0px 20px 30px 20px;
+}
+.trending-img-cont i {
+  padding: 8px;
+}
+
+.trendingimg2 img {
+  width: 150px;
+}
+
+.trendingimg2 .star {
+  display: flex;
+
+  color: red;
+}
+
+.journal {
+  text-align: center;
+  padding: 0px 0px 50px 0px;
+}
+
+.journalimgchild img {
+  width: 200px;
+}
+.journalimgchild {
+  padding: 0px 50px 50px 50px;
+}
+
+.jour {
+  list-style-type: none;
+  font-size: xx-small;
+}
+
+.jour li {
+  position: relative;
+  padding: 12px;
+}
+
+.jour li::before {
+  content: " ";
+  background-color: red;
+  border: 1px solid red;
+  width: 5px;
+  height: 2px;
+  left: -1px;
+  top: 15px;
+  border-radius: 12px;
+  position: absolute;
+}
+
+.journalimgchild h5 {
+  padding: 0px 0px 15px 0px;
+}
+
+.journalicon img {
+  width: 20px;
+}
+
+.journalicon {
+  display: flex;
+  font-size: xx-small;
+  color: grey;
+  padding: 10px 0px 10px 0px;
+}
+
+.journalimg {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.follow {
+  text-align: center;
+  padding: 0px 0px 40px 0px;
+}
+
+.followimg img {
+  width: 150px;
+}
+
+.follow-img-cont {
+  padding: 0px 50px 50px 40px;
+}
+
+.followimg {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  background-color: bisque;
+}
+
+.footerlist {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 50px 0px 50px 0px;
+}
+
+table {
+  font-size: xx-small;
+  width: 200px;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+th {
+  padding: 0px 0px 20px 0px;
+}
+
+td {
+  padding: 3px;
+}
+
+.exp p {
+  padding: 0px 0px 10px 0px;
+  font-size: xx-small;
+}
+
+.playstore img {
+  width: 15px;
+  margin-left: -50px;
+}
+
+.playstore {
+  font-size: 7px;
+  position: relative;
+  width: 80px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.get {
+  color: rgb(207, 204, 204);
+}
+
+.play {
+  position: absolute;
+  margin-bottom: 5px;
+}
+
+.appstore img {
+  width: 15px;
+  margin-left: -50px;
+}
+
+.appstore {
+  font-size: 7px;
+  position: relative;
+  width: 80px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  background: red;
+}
+
+.shift {
+  padding: 0px 0px 0px 10px;
+}
+
+.f4 {
+  padding: 0px 0px 18px 0px;
+}
+
+.online {
+  padding: 20px 0px 15px 0px;
+}
+
+.onlineimg img {
+  width: 100px;
+}
+
+.last {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.copy {
+  font-size: xx-small;
+  padding: 15px 0px 15px 0px;
+  color: rgb(158, 158, 158);
+  text-align: center;
+  background-color: bisque;
+}
+
+.red {
+  color: red;
+}
+
+.horizontal1 {
+  width: 70%;
+}
